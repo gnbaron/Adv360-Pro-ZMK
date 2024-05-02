@@ -45,10 +45,19 @@
 
     macros {
         ZMK_MACRO(dot_spc,
-            wait-ms = <0>;
-            tap-ms = <5>;
-            bindings = <&kp DOT &kp SPACE &sk LSHFT>;
+
+        wait-ms = <0>;
+        tap-ms = <5>;
+        bindings = <&kp DOT &kp SPACE &sk LSHFT>;
+
         )
+
+        dot_space: dot_space {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&caps_word>;
+            label = "DOT_SPACE";
+        };
     };
 
     combos {
@@ -62,6 +71,7 @@
         };
 
         // sticky shift after dot and space
+
         combo_dot_spc {
             timeout-ms = <50>;
             key-positions = <57 69>;
@@ -70,6 +80,7 @@
         };
 
         // =
+
         combo_equal {
             timeout-ms = <50>;
             key-positions = <40 41>;
@@ -78,6 +89,7 @@
         };
 
         // {
+
         combo_lbrc {
             timeout-ms = <50>;
             key-positions = <23 24>;
@@ -86,6 +98,7 @@
         };
 
         // }
+
         combo_rbrc {
             timeout-ms = <50>;
             key-positions = <24 25>;
@@ -94,6 +107,7 @@
         };
 
         // (
+
         combo_lpar {
             timeout-ms = <50>;
             key-positions = <41 42>;
@@ -102,6 +116,7 @@
         };
 
         // )
+
         combo_rpar {
             timeout-ms = <50>;
             key-positions = <42 43>;
@@ -110,6 +125,7 @@
         };
 
         // <
+
         combo_lt {
             timeout-ms = <50>;
             key-positions = <55 56>;
@@ -118,6 +134,7 @@
         };
 
         // >
+
         combo_gt {
             timeout-ms = <50>;
             key-positions = <56 57>;
