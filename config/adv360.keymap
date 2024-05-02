@@ -43,12 +43,86 @@
         };
     };
 
+    macros {
+        ZMK_MACRO(dot_spc,
+            wait-ms = <0>;
+            tap-ms = <5>;
+            bindings = <&kp DOT &kp SPACE &sk LSHFT>;
+        )
+    };
+
     combos {
         compatible = "zmk,combos";
 
         combo_caps_word {
-            bindings = <&caps_word>;
+            timeout-ms = <50>;
             key-positions = <32 41>;
+            bindings = <&caps_word>;
+            layers = <base>;
+        };
+
+        // sticky shift after dot and space
+        combo_dot_spc {
+            timeout-ms = <50>;
+            key-positions = <57 69>;
+            bindings = <&dot_spc>;
+            layers = <base>;
+        };
+
+        // =
+        combo_equal {
+            timeout-ms = <50>;
+            key-positions = <40 41>;
+            bindings = <&kp EQUAL>;
+            layers = <base>;
+        };
+
+        // {
+        combo_lbrc {
+            timeout-ms = <50>;
+            key-positions = <23 24>;
+            bindings = <&kp LBRC>;
+            layers = <base>;
+        };
+
+        // }
+        combo_rbrc {
+            timeout-ms = <50>;
+            key-positions = <24 25>;
+            bindings = <&kp RBRC>;
+            layers = <base>;
+        };
+
+        // (
+        combo_lpar {
+            timeout-ms = <50>;
+            key-positions = <41 42>;
+            bindings = <&kp LPAR>;
+            layers = <base>;
+        };
+
+        // )
+        combo_rpar {
+            timeout-ms = <50>;
+            key-positions = <42 43>;
+            bindings = <&kp RPAR>;
+            layers = <base>;
+        };
+
+        // <
+        combo_lt {
+            timeout-ms = <50>;
+            key-positions = <55 56>;
+            bindings = <&kp LT>;
+            layers = <base>;
+        };
+
+        // >
+        combo_gt {
+            timeout-ms = <50>;
+            key-positions = <56 57>;
+            bindings = <&kp GT>;
+            layers = <base>;
         };
     };
 
