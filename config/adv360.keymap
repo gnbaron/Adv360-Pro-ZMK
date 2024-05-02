@@ -44,19 +44,13 @@
     };
 
     macros {
-        ZMK_MACRO(dot_spc,
-
-        wait-ms = <0>;
-        tap-ms = <5>;
-        bindings = <&kp DOT &kp SPACE &sk LSHFT>;
-
-        )
-
         dot_space: dot_space {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&caps_word>;
+            bindings = <&kp DOT &kp SPACE &sk LSHFT>;
             label = "DOT_SPACE";
+            wait-ms = <0>;
+            tap-ms = <5>;
         };
     };
 
