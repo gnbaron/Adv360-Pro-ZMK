@@ -65,15 +65,6 @@
             mods = <(MOD_RSFT|MOD_LSFT)>;
         };
 
-        qmark_morph: qmark_morph {
-            compatible = "zmk,behavior-mod-morph";
-            label = "QMARK_MORPH";
-            #binding-cells = <0>;
-            bindings = <&kp QMARK>, <&kp EXCL>;
-
-            mods = <(MOD_RSFT|MOD_LSFT)>;
-        };
-
         star_morph: star_morph {
             compatible = "zmk,behavior-mod-morph";
             label = "STAR_MORPH";
@@ -102,7 +93,7 @@
             timeout-ms = <50>;
             key-positions = <32 41>;
             bindings = <&caps_word>;
-            layers = <BASE>;
+            layers = <0>;
         };
 
         // sticky shift after dot and space
@@ -111,7 +102,7 @@
             timeout-ms = <50>;
             key-positions = <57 69>;
             bindings = <&dot_space>;
-            layers = <BASE>;
+            layers = <0>;
         };
 
         // =
@@ -120,7 +111,7 @@
             timeout-ms = <50>;
             key-positions = <40 41>;
             bindings = <&kp EQUAL>;
-            layers = <BASE>;
+            layers = <0>;
         };
 
         // {
@@ -129,7 +120,7 @@
             timeout-ms = <50>;
             key-positions = <23 24>;
             bindings = <&kp LBRC>;
-            layers = <BASE>;
+            layers = <0>;
         };
 
         // }
@@ -138,7 +129,7 @@
             timeout-ms = <50>;
             key-positions = <24 25>;
             bindings = <&kp RBRC>;
-            layers = <BASE>;
+            layers = <0>;
         };
 
         // (
@@ -147,7 +138,7 @@
             timeout-ms = <50>;
             key-positions = <41 42>;
             bindings = <&kp LPAR>;
-            layers = <BASE>;
+            layers = <0>;
         };
 
         // )
@@ -156,7 +147,7 @@
             timeout-ms = <50>;
             key-positions = <42 43>;
             bindings = <&kp RPAR>;
-            layers = <BASE>;
+            layers = <0>;
         };
 
         // <
@@ -165,7 +156,7 @@
             timeout-ms = <50>;
             key-positions = <55 56>;
             bindings = <&kp LT>;
-            layers = <BASE>;
+            layers = <0>;
         };
 
         // >
@@ -174,7 +165,7 @@
             timeout-ms = <50>;
             key-positions = <56 57>;
             bindings = <&kp GT>;
-            layers = <BASE>;
+            layers = <0>;
         };
     };
 
@@ -183,31 +174,31 @@
 
         base {
             bindings = <
-&none  &none        &none        &none         &none          &none  &none                                                                      &none                &none  &none          &none         &none        &none                   &none
-&none  &kp Q        &kp W        &kp E         &kp R          &kp T  &none                                                                      &none                &kp Y  &kp U          &kp I         &kp O        &kp P                   &none
-&none  &hml LGUI A  &hml LALT S  &hml LCTRL D  &hml LSHIFT F  &kp G  &none             &none      &none               &none          &none      &none                &kp H  &hmr RSHIFT J  &hmr RCTRL K  &hmr RALT L  &hmr RGUI SINGLE_QUOTE  &none
-&none  &kp Z        &kp X        &kp C         &kp V          &kp B                               &none               &none                                          &kp N  &kp M          &comma_morph  &dot_morph   &kp FSLH                &none
-&none  &none        &none        &none         &none                 &lt LOWER ESCAPE  &kp ENTER  &lt ADJUST TAB      &lt FN DELETE  &kp SPACE  &lt RAISE BACKSPACE         &none          &none         &none        &none                   &none
+&none  &none        &none        &none         &none          &none  &none                                                            &none            &none  &none          &none         &none        &none                   &none
+&none  &kp Q        &kp W        &kp E         &kp R          &kp T  &none                                                            &none            &kp Y  &kp U          &kp I         &kp O        &kp P                   &none
+&none  &hml LGUI A  &hml LALT S  &hml LCTRL D  &hml LSHIFT F  &kp G  &none         &none      &none          &none         &none      &none            &kp H  &hmr RSHIFT J  &hmr RCTRL K  &hmr RALT L  &hmr RGUI SINGLE_QUOTE  &none
+&none  &kp Z        &kp X        &kp C         &kp V          &kp B                           &none          &none                                     &kp N  &kp M          &comma_morph  &dot_morph   &kp FSLH                &none
+&none  &none        &none        &none         &none                 &lt 1 ESCAPE  &kp ENTER  &lt 4 TAB      &lt 3 DELETE  &kp SPACE  &lt 2 BACKSPACE         &none          &none         &none        &none                   &none
             >;
         };
 
         lower {
             bindings = <
-&trans  &trans        &trans        &trans      &trans          &trans      &trans                                              &trans  &trans            &trans             &trans          &trans           &trans           &trans
-&trans  &trans        &trans        &trans      &trans          &trans      &trans                                              &trans  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp PERCENT      &trans
-&trans  &kp LEFT_GUI  &kp LEFT_ALT  &kp LCTRL   &kp LEFT_SHIFT  &trans      &trans  &trans  &trans      &trans          &trans  &trans  &star_morph       &kp KP_EQUAL       &kp KP_LPAR     &kp KP_RPAR      &kp GRAVE        &trans
-&trans  &kp K_UNDO    &kp K_CUT     &kp K_COPY  &kp K_PASTE     &kp K_REDO                  &trans      &trans                          &kp CARET         &kp DOLLAR         &kp LT          &kp GT           &kp EXCLAMATION  &trans
-&trans  &trans        &trans        &trans      &trans                      &trans  &trans  &trans      &kp UNDERSCORE  &trans  &trans                    &trans             &trans          &trans           &trans           &trans
+&trans  &trans        &trans        &trans      &trans          &trans        &trans                                              &trans  &trans            &trans             &trans          &trans           &trans           &trans
+&trans  &trans        &trans        &trans      &trans          &kp LC(DOWN)  &trans                                              &trans  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp PERCENT      &trans
+&trans  &kp LEFT_GUI  &kp LEFT_ALT  &kp LCTRL   &kp LEFT_SHIFT  &kp LA(UP)    &trans  &trans  &trans      &trans          &trans  &trans  &star_morph       &kp KP_EQUAL       &kp KP_LPAR     &kp KP_RPAR      &kp GRAVE        &trans
+&trans  &kp K_UNDO    &kp K_CUT     &kp K_COPY  &kp K_PASTE     &kp K_REDO                    &trans      &trans                          &kp CARET         &kp DOLLAR         &kp LT          &kp GT           &kp EXCLAMATION  &trans
+&trans  &trans        &trans        &trans      &trans                        &trans  &trans  &trans      &kp UNDERSCORE  &trans  &trans                    &trans             &trans          &trans           &trans           &trans
             >;
         };
 
         raise {
             bindings = <
-&trans  &trans  &trans           &trans           &trans           &trans           &trans                                      &trans  &trans    &trans         &trans       &trans         &trans             &trans
-&trans  &trans  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_PLUS      &trans                                      &trans  &trans    &kp AMPS       &kp PIPE     &kp BACKSLASH  &trans             &trans
-&trans  &kp AT  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_NUMBER_0  &trans  &trans  &trans      &trans  &trans  &trans  &kp LEFT  &kp DOWN       &kp UP       &kp RIGHT      &kp RIGHT_COMMAND  &trans
-&trans  &trans  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_MINUS                     &trans      &trans                  &kp HOME  &kp PAGE_DOWN  &kp PAGE_UP  &kp END        &trans             &trans
-&trans  &trans  &trans           &trans           &trans                            &trans  &trans  &trans      &trans  &trans  &trans            &trans         &trans       &trans         &trans             &trans
+&trans  &trans                &trans                     &trans                         &trans                       &trans           &trans                                      &trans  &trans    &trans         &trans       &trans         &trans             &trans
+&trans  &trans                &kp KP_NUMBER_7            &kp KP_NUMBER_8                &kp KP_NUMBER_9              &kp KP_PLUS      &trans                                      &trans  &trans    &kp AMPS       &kp PIPE     &kp BACKSLASH  &trans             &trans
+&trans  &hml LEFT_COMMAND AT  &hml LEFT_ALT KP_NUMBER_4  &hml LEFT_CONTROL KP_NUMBER_5  &hml LEFT_SHIFT KP_NUMBER_6  &kp KP_NUMBER_0  &trans  &trans  &trans      &trans  &trans  &trans  &kp LEFT  &kp DOWN       &kp UP       &kp RIGHT      &kp RIGHT_COMMAND  &trans
+&trans  &trans                &kp KP_NUMBER_1            &kp KP_NUMBER_2                &kp KP_NUMBER_3              &kp KP_MINUS                     &trans      &trans                  &kp HOME  &kp PAGE_DOWN  &kp PAGE_UP  &kp END        &trans             &trans
+&trans  &trans                &trans                     &trans                         &trans                                        &trans  &trans  &trans      &trans  &trans  &trans            &trans         &trans       &trans         &trans             &trans
             >;
         };
 
