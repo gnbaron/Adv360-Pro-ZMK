@@ -73,6 +73,15 @@
 
             mods = <(MOD_RSFT|MOD_LSFT)>;
         };
+
+        star_morph: star_morph {
+            compatible = "zmk,behavior-mod-morph";
+            label = "STAR_MORPH";
+            #binding-cells = <0>;
+            bindings = <&kp ASTERISK>, <&kp HASH>;
+
+            mods = <(MOD_RSFT|MOD_LSFT)>;
+        };
     };
 
     macros {
@@ -177,28 +186,28 @@
 &none  &none        &none        &none         &none          &none  &none                                                                      &none                &none  &none          &none         &none        &none                   &none
 &none  &kp Q        &kp W        &kp E         &kp R          &kp T  &none                                                                      &none                &kp Y  &kp U          &kp I         &kp O        &kp P                   &none
 &none  &hml LGUI A  &hml LALT S  &hml LCTRL D  &hml LSHIFT F  &kp G  &none             &none      &none               &none          &none      &none                &kp H  &hmr RSHIFT J  &hmr RCTRL K  &hmr RALT L  &hmr RGUI SINGLE_QUOTE  &none
-&none  &kp Z        &kp X        &kp C         &kp V          &kp B                               &none               &none                                          &kp N  &kp M          &kp COMMA     &kp DOT      &kp FSLH                &none
+&none  &kp Z        &kp X        &kp C         &kp V          &kp B                               &none               &none                                          &kp N  &kp M          &comma_morph  &dot_morph   &kp FSLH                &none
 &none  &none        &none        &none         &none                 &lt LOWER ESCAPE  &kp ENTER  &lt ADJUST TAB      &lt FN DELETE  &kp SPACE  &lt RAISE BACKSPACE         &none          &none         &none        &none                   &none
             >;
         };
 
         lower {
             bindings = <
-&trans  &trans        &trans        &trans      &trans          &trans      &trans                                                   &trans        &trans            &trans             &trans          &trans           &trans           &trans
-&trans  &trans        &trans        &trans      &trans          &trans      &trans                                                   &trans        &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp PERCENT      &trans
-&trans  &kp LEFT_GUI  &kp LEFT_ALT  &kp LCTRL   &kp LEFT_SHIFT  &trans      &trans  &trans  &trans      &trans       &trans          &trans        &trans            &kp KP_EQUAL       &kp KP_LPAR     &kp KP_RPAR      &kp GRAVE        &trans
-&trans  &kp K_UNDO    &kp K_CUT     &kp K_COPY  &kp K_PASTE     &kp K_REDO                  &trans      &trans                                     &kp CARET         &kp DOLLAR         &kp LT          &kp GT           &kp EXCLAMATION  &trans
-&trans  &trans        &trans        &trans      &trans                      &trans  &trans  &trans      &kp KP_PLUS  &kp UNDERSCORE  &kp KP_MINUS                    &trans             &trans          &trans           &trans           &trans
+&trans  &trans        &trans        &trans      &trans          &trans      &trans                                              &trans  &trans            &trans             &trans          &trans           &trans           &trans
+&trans  &trans        &trans        &trans      &trans          &trans      &trans                                              &trans  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp PERCENT      &trans
+&trans  &kp LEFT_GUI  &kp LEFT_ALT  &kp LCTRL   &kp LEFT_SHIFT  &trans      &trans  &trans  &trans      &trans          &trans  &trans  &star_morph       &kp KP_EQUAL       &kp KP_LPAR     &kp KP_RPAR      &kp GRAVE        &trans
+&trans  &kp K_UNDO    &kp K_CUT     &kp K_COPY  &kp K_PASTE     &kp K_REDO                  &trans      &trans                          &kp CARET         &kp DOLLAR         &kp LT          &kp GT           &kp EXCLAMATION  &trans
+&trans  &trans        &trans        &trans      &trans                      &trans  &trans  &trans      &kp UNDERSCORE  &trans  &trans                    &trans             &trans          &trans           &trans           &trans
             >;
         };
 
         raise {
             bindings = <
-&trans  &trans  &trans           &trans           &trans           &trans  &trans                                               &trans  &trans    &trans         &trans       &trans     &trans             &trans
-&trans  &trans  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &trans  &trans                                               &trans  &trans    &trans         &trans       &trans     &trans             &trans
-&trans  &kp AT  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &trans  &trans           &trans  &trans      &trans  &trans  &trans  &kp LEFT  &kp DOWN       &kp UP       &kp RIGHT  &kp RIGHT_COMMAND  &trans
-&trans  &trans  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &trans                           &trans      &trans                  &kp HOME  &kp PAGE_DOWN  &kp PAGE_UP  &kp END    &trans             &trans
-&trans  &trans  &trans           &trans           &trans                   &kp KP_NUMBER_0  &trans  &trans      &trans  &trans  &trans            &trans         &trans       &trans     &trans             &trans
+&trans  &trans  &trans           &trans           &trans           &trans           &trans                                      &trans  &trans    &trans         &trans       &trans         &trans             &trans
+&trans  &trans  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_PLUS      &trans                                      &trans  &trans    &kp AMPS       &kp PIPE     &kp BACKSLASH  &trans             &trans
+&trans  &kp AT  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_NUMBER_0  &trans  &trans  &trans      &trans  &trans  &trans  &kp LEFT  &kp DOWN       &kp UP       &kp RIGHT      &kp RIGHT_COMMAND  &trans
+&trans  &trans  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_MINUS                     &trans      &trans                  &kp HOME  &kp PAGE_DOWN  &kp PAGE_UP  &kp END        &trans             &trans
+&trans  &trans  &trans           &trans           &trans                            &trans  &trans  &trans      &trans  &trans  &trans            &trans         &trans       &trans         &trans             &trans
             >;
         };
 
