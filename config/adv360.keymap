@@ -78,7 +78,7 @@
             compatible = "zmk,behavior-mod-morph";
             label = "CARET_MORPH";
             #binding-cells = <0>;
-            bindings = <&kp CARET>, <&kp NUMBER_6>;
+            bindings = <&kp CARET>, <&kp LC(NUMBER_6)>;
 
             mods = <(MOD_LCTL|MOD_RCTL)>;
         };
