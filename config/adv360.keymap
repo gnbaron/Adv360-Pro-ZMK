@@ -195,11 +195,11 @@
 
         lower {
             bindings = <
-&trans  &trans        &trans        &trans     &trans          &trans        &trans                                              &trans  &trans            &trans             &trans          &trans           &trans           &trans
-&trans  &trans        &trans        &trans     &trans          &kp LC(DOWN)  &trans                                              &trans  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp PERCENT      &trans
-&trans  &kp LEFT_GUI  &kp LEFT_ALT  &kp LCTRL  &kp LEFT_SHIFT  &kp LA(UP)    &trans  &trans  &trans      &trans          &trans  &trans  &star_morph       &kp KP_EQUAL       &kp KP_LPAR     &kp KP_RPAR      &kp GRAVE        &trans
-&trans  &kp LG(Z)     &kp LG(X)     &kp LG(C)  &kp LG(V)       &trans                        &trans      &trans                          &caret_morph      &kp DOLLAR         &kp LT          &kp GT           &kp EXCLAMATION  &trans
-&trans  &trans        &trans        &trans     &trans                        &trans  &trans  &trans      &kp UNDERSCORE  &trans  &trans                    &trans             &trans          &trans           &trans           &trans
+&trans  &trans        &trans        &trans     &trans          &trans        &trans                                         &trans  &trans            &trans             &trans                &trans                 &trans           &trans
+&trans  &trans        &trans        &trans     &trans          &kp LC(DOWN)  &trans                                         &trans  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp PERCENT      &trans
+&trans  &kp LEFT_GUI  &kp LEFT_ALT  &kp LCTRL  &kp LEFT_SHIFT  &kp LA(UP)    &trans  &trans  &trans      &trans     &trans  &trans  &star_morph       &kp EQUAL          &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp GRAVE        &trans
+&trans  &kp LG(Z)     &kp LG(X)     &kp LG(C)  &kp LG(V)       &trans                        &trans      &trans                     &caret_morph      &kp DOLLAR         &kp LT                &kp GT                 &kp EXCLAMATION  &trans
+&trans  &trans        &trans        &trans     &trans                        &trans  &trans  &trans      &kp MINUS  &trans  &trans                    &trans             &trans                &trans                 &trans           &trans
             >;
         };
 
