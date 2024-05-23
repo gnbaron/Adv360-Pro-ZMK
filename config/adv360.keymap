@@ -185,51 +185,41 @@
 
         base {
             bindings = <
-&none  &none        &none        &none         &none          &none  &none                                                              &none          &none  &none          &none         &none        &none                   &none
-&none  &kp Q        &kp W        &kp E         &kp R          &kp T  &none                                                              &none          &kp Y  &kp U          &kp I         &kp O        &kp P                   &none
-&none  &hml LGUI A  &hml LALT S  &hml LCTRL D  &hml LSHIFT F  &kp G  &none      &none         &none          &none         &none        &none          &kp H  &hmr RSHIFT J  &hmr RCTRL K  &hmr RALT L  &hmr RGUI SINGLE_QUOTE  &none
-&none  &kp Z        &kp X        &kp C         &kp V          &kp B                           &none          &none                                     &kp N  &kp M          &comma_morph  &dot_morph   &kp FSLH                &none
-&none  &none        &none        &none         &none                 &kp SPACE  &lt 1 ESCAPE  &lt 4 TAB      &lt 3 DELETE  &lt 2 ENTER  &kp BACKSPACE         &none          &none         &none        &none                   &none
+&kp EQUAL  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5  &none                                                                 &none          &kp N6  &kp N7  &kp N8     &kp N9   &kp N0    &kp MINUS
+&lt 3 TAB  &kp Q   &kp W   &kp E   &kp R   &kp T   &none                                                                 &none          &kp Y   &kp U   &kp I      &kp O    &kp P     &kp BSLH
+&kp ESC    &kp A   &kp S   &kp D   &kp F   &kp G   &none      &none        &none             &none     &none             &none          &kp H   &kp J   &kp K      &kp L    &kp SEMI  &kp SQT
+&kp LSHFT  &kp Z   &kp X   &kp C   &kp V   &kp B                           &none             &none                                      &kp N   &kp M   &kp COMMA  &kp DOT  &kp FSLH  &kp RSHFT
+&none      &none   &none   &none   &none           &kp SPACE  &lt 1 ENTER  &kp LEFT_ALT      &kp LGUI  &kp LEFT_CONTROL  &kp BACKSPACE          &none   &none      &none    &none     &none
             >;
         };
 
-        lower {
+        sym {
             bindings = <
-&trans  &trans        &trans        &trans     &trans          &trans        &trans                                         &trans  &trans            &trans             &trans                &trans                 &trans           &trans
-&trans  &trans        &trans        &trans     &trans          &kp LC(DOWN)  &trans                                         &trans  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp PERCENT      &trans
-&trans  &kp LEFT_GUI  &kp LEFT_ALT  &kp LCTRL  &kp LEFT_SHIFT  &kp LA(UP)    &trans  &trans  &trans      &trans     &trans  &trans  &star_morph       &kp EQUAL          &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp GRAVE        &trans
-&trans  &kp LG(Z)     &kp LG(X)     &kp LG(C)  &kp LG(V)       &trans                        &trans      &trans                     &caret_morph      &kp DOLLAR         &kp LT                &kp GT                 &kp EXCLAMATION  &trans
-&trans  &trans        &trans        &trans     &trans                        &trans  &trans  &trans      &kp MINUS  &trans  &trans                    &trans             &trans                &trans                 &trans           &trans
+&trans  &trans     &trans     &trans     &trans     &trans        &trans                                      &trans           &trans            &trans             &trans                &trans                 &trans           &trans
+&trans  &trans     &trans     &trans     &trans     &kp LC(DOWN)  &trans                                      &trans           &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp PERCENT      &trans
+&trans  &trans     &trans     &trans     &trans     &kp LA(UP)    &trans  &trans  &trans      &trans  &trans  &trans           &star_morph       &kp EQUAL          &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp AMPS         &kp GRAVE
+&trans  &kp LG(Z)  &kp LG(X)  &kp LG(C)  &kp LG(V)  &trans                        &trans      &trans                           &caret_morph      &kp DOLLAR         &kp LT                &kp GT                 &kp EXCLAMATION  &trans
+&trans  &trans     &trans     &trans     &trans                   &trans  &trans  &trans      &trans  &trans  &lt 2 BACKSPACE                    &trans             &trans                &trans                 &trans           &trans
             >;
         };
 
-        raise {
+        nav {
             bindings = <
-&trans  &trans                &trans                     &trans                         &trans                       &trans           &trans                                      &trans  &trans    &trans         &trans       &trans         &trans             &trans
-&trans  &trans                &kp KP_NUMBER_7            &kp KP_NUMBER_8                &kp KP_NUMBER_9              &kp KP_PLUS      &trans                                      &trans  &trans    &kp AMPS       &kp PIPE     &kp BACKSLASH  &trans             &trans
-&trans  &hml LEFT_COMMAND AT  &hml LEFT_ALT KP_NUMBER_4  &hml LEFT_CONTROL KP_NUMBER_5  &hml LEFT_SHIFT KP_NUMBER_6  &kp KP_NUMBER_0  &trans  &trans  &trans      &trans  &trans  &trans  &kp LEFT  &kp DOWN       &kp UP       &kp RIGHT      &kp RIGHT_COMMAND  &trans
-&trans  &trans                &kp KP_NUMBER_1            &kp KP_NUMBER_2                &kp KP_NUMBER_3              &kp KP_MINUS                     &trans      &trans                  &kp HOME  &kp PAGE_DOWN  &kp PAGE_UP  &kp END        &trans             &trans
-&trans  &trans                &trans                     &trans                         &trans                                        &trans  &trans  &trans      &trans  &trans  &trans            &trans         &trans       &trans         &trans             &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans                                      &trans  &trans    &trans         &trans       &trans     &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans                                      &trans  &trans    &trans         &trans       &trans     &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &kp LEFT  &kp DOWN       &kp UP       &kp RIGHT  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans      &trans                  &kp HOME  &kp PAGE_DOWN  &kp PAGE_UP  &kp END    &trans  &trans
+&trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans      &trans  &trans  &trans            &trans         &trans       &trans     &trans  &trans
             >;
         };
 
         fn {
             bindings = <
-&trans  &trans   &trans  &trans  &trans  &trans  &trans                                      &trans  &trans  &trans     &trans     &trans    &trans    &trans
-&trans  &kp F12  &kp F7  &kp F8  &kp F9  &trans  &trans                                      &trans  &trans  &trans     &trans     &trans    &trans    &trans
-&trans  &kp F11  &kp F4  &kp F5  &kp F6  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &kp RSHFT  &kp RCTRL  &kp RALT  &kp RGUI  &trans
-&trans  &kp F10  &kp F1  &kp F2  &kp F3  &trans                  &trans      &trans                  &trans  &trans     &trans     &trans    &trans    &trans
-&trans  &trans   &trans  &trans  &trans          &trans  &trans  &trans      &trans  &trans  &trans          &trans     &trans     &trans    &trans    &trans
-            >;
-        };
-
-        adjust {
-            bindings = <
-&trans  &trans      &trans        &trans                &trans                &trans          &trans                                                        &trans      &trans      &trans                &trans                &trans  &trans  &trans
-&trans  &bt BT_CLR  &trans        &kp LS(LG(NUMBER_3))  &kp LS(LG(NUMBER_4))  &kp LS(LG(N5))  &trans                                                        &trans      &trans      &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &trans  &trans  &trans
-&trans  &trans      &bl BL_TOG    &bl BL_DEC            &bl BL_INC            &trans          &trans  &trans  &trans      &trans          &trans            &trans      &kp C_MUTE  &kp C_VOL_DN          &kp C_VOL_UP          &trans  &trans  &trans
-&trans  &trans      &bt BT_SEL 0  &bt BT_SEL 1          &bt BT_SEL 2          &trans                          &trans      &trans                                        &trans      &trans                &trans                &trans  &trans  &trans
-&trans  &trans      &trans        &trans                &trans                                &trans  &trans  &trans      &kp C_PREVIOUS  &kp C_PLAY_PAUSE  &kp C_NEXT              &trans                &trans                &trans  &trans  &trans
+&kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6  &trans                                                        &trans      &kp F7      &kp F8                &kp F9                &kp F10       &kp F11     &kp F12
+&trans  &trans  &trans  &trans  &trans  &trans  &trans                                                        &trans      &trans      &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &bl BL_DEC    &bl BL_INC  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans      &trans          &trans            &trans      &kp C_MUTE  &kp C_VOL_DN          &kp C_VOL_UP          &bl BL_TOG    &trans      &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans      &trans                                        &trans      &bt BT_SEL 0          &bt BT_SEL 1          &bt BT_SEL 2  &bt BT_CLR  &trans
+&trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans      &kp C_PREVIOUS  &kp C_PLAY_PAUSE  &kp C_NEXT              &trans                &trans                &trans        &trans      &trans
             >;
         };
     };
