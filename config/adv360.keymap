@@ -185,21 +185,21 @@
 
         base {
             bindings = <
-&kp EQUAL  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5  &none                                                                 &none          &kp N6  &kp N7  &kp N8     &kp N9   &kp N0    &kp MINUS
-&lt 3 TAB  &kp Q   &kp W   &kp E   &kp R   &kp T   &none                                                                 &none          &kp Y   &kp U   &kp I      &kp O    &kp P     &kp BSLH
-&kp ESC    &kp A   &kp S   &kp D   &kp F   &kp G   &none      &none        &none             &none     &none             &none          &kp H   &kp J   &kp K      &kp L    &kp SEMI  &kp SQT
-&kp LSHFT  &kp Z   &kp X   &kp C   &kp V   &kp B                           &none             &none                                      &kp N   &kp M   &kp COMMA  &kp DOT  &kp FSLH  &kp RSHFT
-&none      &none   &none   &none   &none           &kp SPACE  &lt 1 ENTER  &kp LEFT_ALT      &kp LGUI  &kp LEFT_CONTROL  &kp BACKSPACE          &none   &none      &none    &none     &none
+&kp EQUAL  &kp N1           &kp N2           &kp N3               &kp N4             &kp N5  &none                                                                            &none            &kp N6  &kp N7  &kp N8     &kp N9            &kp N0                    &kp MINUS
+&kp TAB    &kp Q            &kp W            &kp E                &kp R              &kp T   &none                                                                            &none            &kp Y   &kp U   &kp I      &kp O             &kp P                     &kp BSLH
+&kp ESC    &hml LEFT_GUI A  &hml LEFT_ALT S  &hml LEFT_CONTROL D  &hml LEFT_SHIFT F  &kp G   &none                 &none        &none                &none  &none             &none            &kp H   &kp J   &kp K      &hmr RIGHT_ALT L  &hmr RIGHT_GUI SEMICOLON  &kp SQT
+&kp LSHFT  &kp Z            &kp X            &kp C                &kp V              &kp B                                      &none                &none                                     &kp N   &kp M   &kp COMMA  &kp DOT           &kp FSLH                  &kp RSHFT
+&none      &none            &none            &none                &none                      &mt LEFT_SHIFT SPACE  &lt 1 ENTER  &lt 3 LG(SPACE)      &none  &kp LEFT_CONTROL  &lt 2 BACKSPACE          &none   &none      &none             &none                     &none
             >;
         };
 
         sym {
             bindings = <
-&trans  &trans     &trans     &trans     &trans     &trans        &trans                                      &trans           &trans            &trans             &trans                &trans                 &trans           &trans
-&trans  &trans     &trans     &trans     &trans     &kp LC(DOWN)  &trans                                      &trans           &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp PERCENT      &trans
-&trans  &trans     &trans     &trans     &trans     &kp LA(UP)    &trans  &trans  &trans      &trans  &trans  &trans           &star_morph       &kp EQUAL          &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp AMPS         &kp GRAVE
-&trans  &kp LG(Z)  &kp LG(X)  &kp LG(C)  &kp LG(V)  &trans                        &trans      &trans                           &caret_morph      &kp DOLLAR         &kp LT                &kp GT                 &kp EXCLAMATION  &trans
-&trans  &trans     &trans     &trans     &trans                   &trans  &trans  &trans      &trans  &trans  &lt 2 BACKSPACE                    &trans             &trans                &trans                 &trans           &trans
+&trans  &trans        &trans        &trans            &trans          &trans        &trans                                      &trans  &trans            &trans             &trans                &trans                 &trans           &trans
+&trans  &trans        &trans        &trans            &trans          &kp LC(DOWN)  &trans                                      &trans  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp PERCENT      &trans
+&trans  &kp LEFT_GUI  &kp LEFT_ALT  &kp LEFT_CONTROL  &kp LEFT_SHIFT  &kp LA(UP)    &trans  &trans  &trans      &trans  &trans  &trans  &star_morph       &kp EQUAL          &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp AMPS         &kp GRAVE
+&trans  &trans        &trans        &trans            &trans          &trans                        &trans      &trans                  &caret_morph      &kp DOLLAR         &kp LT                &kp GT                 &kp EXCLAMATION  &trans
+&trans  &trans        &trans        &trans            &trans                        &trans  &trans  &trans      &trans  &trans  &trans                    &trans             &trans                &trans                 &trans           &trans
             >;
         };
 
